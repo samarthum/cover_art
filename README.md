@@ -1,2 +1,2 @@
-# cover_art
+# CoverArtist
 AI Cover Art Generator
