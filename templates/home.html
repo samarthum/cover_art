@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mx-auto flex flex-col items-center">
+    <div class="mt-12 md:mt-18 container max-w-4xl mx-auto text-center text-4xl font-bold">Describe the cover art that
+        you want
+    </div>
+    <form class="w-full flex flex-col items-center" action="" method="post">{% csrf_token %}
+        <div class="pt-8 w-3/4 md:w-1/2">
+            <input type="textarea" name="prompt" id="" placeholder="e.g. A spaceman in the ocean drinking wine"
+                class="w-full p-3 border-2 border-slate-400 rounded-md" required />
+        </div>
+        <button type="submit"
+            class="text-md font-bold mt-8 py-3 px-5 text-white bg-indigo-600 rounded-md">Generate</button>
+    </form>
+    {% if request.method == "POST" %}
+    <img src="{{image_url}}" alt="" width="512px" height="512px" class="mt-12 p-2 border-2 border-slate-200">
+    <p class="max-w-lg mt-4 mb-4 text-center text-slate-600">{{prompt}}</p>
+    <button type="submit"
+        class="hidden text-md font-bold mt-2 mb-8 py-3 px-5 text-white bg-indigo-600 rounded-md">Regenerate</button>
+    {% endif %}
+</div>
+{% endblock content %}
