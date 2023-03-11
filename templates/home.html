@@ -8,8 +8,7 @@
     </div>
     <form class="w-full flex flex-col items-center" action="" method="post">{% csrf_token %}
         <div class="pt-8 w-3/4 md:w-1/2">
-            <input type="textarea" name="prompt" id="" placeholder="e.g. A spaceman in the ocean drinking wine"
-                class="w-full p-3 border-2 border-slate-400 rounded-md" required />
+            <textarea rows="1" name="prompt" id="" placeholder="e.g. A spaceman in the ocean" class="w-full p-3 border-2 border-slate-400 rounded-md" style="resize: none;" required></textarea>
         </div>
         <button type="submit"
             class="text-md font-bold mt-8 py-3 px-5 text-white bg-indigo-600 rounded-md">Generate</button>
