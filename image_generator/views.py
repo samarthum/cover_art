@@ -32,7 +32,7 @@ inputs = {
 
     # Scale for classifier-free guidance
     # Range: 1 to 20
-    'guidance_scale': 7.5,
+    'guidance_scale': 10,
 
     # Choose a scheduler.
     'scheduler': "DPMSolverMultistep",
