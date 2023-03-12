@@ -27,7 +27,7 @@ inputs = {
 
     # Number of denoising steps
     # Range: 1 to 500
-    'num_inference_steps': 50,
+    'num_inference_steps': 100,
 
     # Scale for classifier-free guidance
     # Range: 1 to 20
