@@ -19,7 +19,7 @@ inputs = {
     'image_dimensions': "512x512",
 
     # Specify things to not see in the output
-    'negative_prompt': "text, words, letters",
+    'negative_prompt': "text, words, letters, ugly, deformed",
 
     # Number of images to output.
     # Range: 1 to 4
