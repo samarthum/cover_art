@@ -45,7 +45,7 @@ def home_view(request):
     if request.method == "POST":
         prompt_prefix = "Create a cover art for a song. Please do not put any text over the image. The description of the artwork is: "
 
-        inputs["prompt"] = prompt_prefix + request.POST["prompt"]
+        inputs["prompt"] = request.POST["prompt"]
         image_url = version.predict(**inputs)[0]
         context = {"image_url": image_url, "prompt": request.POST["prompt"]}
         return render(
