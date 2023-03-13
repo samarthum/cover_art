@@ -35,7 +35,7 @@ inputs = {
     'guidance_scale': 10,
 
     # Choose a scheduler.
-    'scheduler': "DPMSolverMultistep",
+    'scheduler': "K_EULER",
 }
 
 
